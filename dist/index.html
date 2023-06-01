@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>姓名：<span id="name"></span></p>
+    <p>年龄：<sapn id="age"></sapn></p>
+    <p>住址：<span id="addr"></span></p>
+    <input type="text" oninput="user.name = this.value" />
+    <input type="text" oninput="user.age = this.value" />
+    <input type="text" oninput="user.addr = this.value" />
+  </body>
+  <script type="text/javascript" src="./js/1.js" ></script>
+  <script type="text/javascript" src="./js/5.js" ></script>
+  <script>
+    var user = {
+      name: "张三",
+      age: "18",
+      addr: "山东",
+    }
+
+    // doms.btn.onclick = function () {
+    //   doms.h1.textContent = "yyyy";
+    //   delay(1000);
+    // };
+    user = test1(user);
+    console.log(user)
+
+    function setName() {
+      let dom = document.getElementById("name");
+      dom.innerHTML = user.name;
+    }
+
+    function setAge() {
+      let dom = document.getElementById("age");
+      dom.innerHTML = user.age;
+    }
+
+    function setAddr() {
+      let dom = document.getElementById("addr");
+      dom.innerHTML = user.addr;
+    }
+
+    handleRun(setName)
+    handleRun(setAge)
+    handleRun(setAddr)
+
+    // setName()
+  </script>
+</html>
